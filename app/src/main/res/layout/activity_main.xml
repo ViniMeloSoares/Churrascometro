@@ -5,14 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/principal"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Text_principal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Churrascômetro"
-        android:textSize="26dp"
+        android:textSize="28dp"
+        android:textColor="@color/text"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
@@ -29,67 +32,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        android:backgroundTint="@color/Botao"
+        android:layout_marginTop="100dp" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_adultos"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="@id/Text_crianças"
+        app:layout_constraintTop_toTopOf="@id/Text_principal"
+        android:layout_marginBottom="0dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="271dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de adultos" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/Text_crianças"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_adultos"
+        app:layout_constraintBottom_toBottomOf="@id/Text_duração"
+        android:layout_marginBottom="0dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="314dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de crianças" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/Text_duração"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/Text_crianças"
+        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:layout_marginBottom="35dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="408dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="hint"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="220dp"
-        android:hint="hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="hint"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
