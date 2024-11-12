@@ -11,10 +11,16 @@ class Result_Screen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_result_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val carne_result =intent.getIntExtra("Carne", 0)
+        val linguiça_result = intent.getIntExtra("Linguiça",0)
+        val cerveja_result = intent.getIntExtra("Cerveja", 0)
+        val refrigerante_result = intent.getIntExtra("Refrigerante",0)
+
+
+
+
+
+
         }
     }
-}
