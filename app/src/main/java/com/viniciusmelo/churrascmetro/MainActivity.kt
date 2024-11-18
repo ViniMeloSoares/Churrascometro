@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
 
          } else {
 
-         val adultos: Int = adultosSpring.toInt()
-         val crianças: Int = criançasSpring.toInt()
-         val duração: Int = duraçãoSpring.toInt()
+         val adultos: Double = adultosSpring.toDouble()
+         val crianças: Double = criançasSpring.toDouble()
+         val duração: Double = duraçãoSpring.toDouble()
 
-         val carne_adulto = if (duração >5) 500 else 300
-         val carne_criança = if (duração >5) 250 else 100
+         val carne_adulto = if (duração >5) 500.00 else 300.00
+         val carne_criança = if (duração >5) 250.00 else 100.00
          val linguiça_adulto = if (duração >5) 400 else 200
          val linguiça_criança = if (duração >5) 200 else 100
          val cerveja_adulto = if (duração >5) 6 else 3
@@ -53,16 +53,19 @@ class MainActivity : AppCompatActivity() {
          val cerveja_total = cerveja_adulto*adultos
          val refrigerante_total = (refrigerante_adulto*adultos) + (refrigerante_criança*crianças)
 
-         val intent = Intent (this, Result_Screen :: class.java)
-            intent.putExtra("Carne", carne_total)
-            intent.putExtra("Linguiça", linguiça_total)
-            intent.putExtra("Cerveja", cerveja_total)
-            intent.putExtra("Refrigerante", refrigerante_total)
 
-            startActivity(intent)
+            val intent = Intent(this, Result_Screen::class.java).also {
+
+                it.putExtra("Carne", carne_total)
+                it.putExtra("Linguiça", linguiça_total)
+                it.putExtra("Cerveja", cerveja_total)
+                it.putExtra("Refrigerante", refrigerante_total)
+
+                startActivity(it)
+            }
 
 
-      }
+        }
     }
   }
 }
