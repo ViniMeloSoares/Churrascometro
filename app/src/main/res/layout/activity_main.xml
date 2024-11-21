@@ -32,6 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/iptText_crianças"
         app:layout_constraintTop_toTopOf="@id/Text_principal"
+        app:hintEnabled="false"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -42,7 +43,9 @@
             android:id="@+id/edt_adultos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de adultos" />
+            android:hint="Número de adultos"
+            android:maxLength="3"
+            android:inputType="numberDecimal"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,6 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ipttext_adultos"
         app:layout_constraintBottom_toBottomOf="@id/iptText_duração"
+        app:hintEnabled="false"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -64,7 +68,10 @@
             android:id="@+id/edt_crianças"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de crianças" />
+            android:hint="Número de crianças"
+            android:maxLength="3"
+            android:inputType="numberDecimal"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -75,6 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/iptText_crianças"
         app:layout_constraintBottom_toTopOf="@id/button_calcular"
+        app:hintEnabled="false"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -85,7 +93,10 @@
             android:id="@+id/edt_duração"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Duração do churrasco (em horas)" />
+            android:hint="Duração do churrasco (em horas)"
+            android:maxLength="2"
+            android:inputType="numberDecimal"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
