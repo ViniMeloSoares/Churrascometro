@@ -45,7 +45,8 @@
             android:layout_height="wrap_content"
             android:hint="Número de adultos"
             android:maxLength="3"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_bg"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +71,8 @@
             android:layout_height="wrap_content"
             android:hint="Número de crianças"
             android:maxLength="3"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_bg"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,7 +97,8 @@
             android:layout_height="wrap_content"
             android:hint="Duração do churrasco (em horas)"
             android:maxLength="2"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_bg"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
